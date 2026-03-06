@@ -1,1 +1,83 @@
 @import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Base colors - dark theme only for this app */
+  --background: #000000;
+  --foreground: #ffffff;
+  --muted: rgba(255, 255, 255, 0.1);
+  --muted-foreground: rgba(255, 255, 255, 0.5);
+  --border: rgba(255, 255, 255, 0.1);
+
+  /* Primary accent - emerald/teal */
+  --primary: #10b981;
+  --primary-foreground: #000000;
+
+  /* Visualization colors - use these in all visualizations */
+  --viz-primary: #10b981;       /* Main line/element color - emerald */
+  --viz-secondary: #06b6d4;     /* Secondary elements - cyan */
+  --viz-accent: #f59e0b;        /* Highlights, points - amber */
+  --viz-error: #ef4444;         /* Errors, negative values - red */
+  --viz-class0: #3b82f6;        /* Classification class 0 - blue */
+  --viz-class1: #f59e0b;        /* Classification class 1 - amber */
+
+  /* Chart/graph colors for multiple series */
+  --viz-1: #10b981;
+  --viz-2: #06b6d4;
+  --viz-3: #8b5cf6;
+  --viz-4: #f59e0b;
+  --viz-5: #ef4444;
+  --viz-6: #ec4899;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Scrollbar - minimal */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Mafs visualization library overrides */
+.MafsView {
+  --mafs-bg: transparent;
+  --mafs-fg: rgba(255, 255, 255, 0.8);
+  --mafs-line-color: rgba(255, 255, 255, 0.1);
+}
