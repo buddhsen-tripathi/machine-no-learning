@@ -6,7 +6,7 @@ Thanks for your interest in contributing! This project aims to make ML concepts 
 
 ```bash
 # Clone your fork
-git clone https://github.com/YOUR_USERNAME/machine-no-learning.git
+git clone https://github.com/buddhsen-tripathi/machine-no-learning.git
 cd machine-no-learning
 
 # Install dependencies

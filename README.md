@@ -23,7 +23,7 @@ Interactive visualizations to understand machine learning concepts. No math PhD 
 
 ```bash
 # Clone the repository
-git clone https://github.com/user/machine-no-learning.git
+git clone https://github.com/buddhsen-tripathi/machine-no-learning.git
 cd machine-no-learning
 
 # Install dependencies
