@@ -1,6 +1,6 @@
 # Machine No Learning
 
-Interactive visualizations to understand machine learning concepts. No math PhD required.
+Interactive visualizations to understand machine learning concepts.
 
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black)](https://nextjs.org/)
@@ -95,4 +95,4 @@ bun run lint   # Check code style
 
 ## License
 
-[MIT](LICENSE) - feel free to use this for learning, teaching, or building upon.
+[MIT](LICENSE)
