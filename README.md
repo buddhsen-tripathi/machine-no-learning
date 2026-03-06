@@ -1,34 +1,98 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Machine No Learning
 
-## Getting Started
+Interactive visualizations to understand machine learning concepts. No math PhD required.
 
-First, run the development server:
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Next.js](https://img.shields.io/badge/Next.js-16-black)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)](https://www.typescriptlang.org/)
+
+## Visualizations
+
+| Visualization | Description |
+|---------------|-------------|
+| **Gradient Descent** | 3D loss surfaces with animated optimization paths |
+| **Linear Regression** | Interactive data points, watch the line fit in real-time |
+| **Neural Network** | Forward propagation with adjustable layers and activations |
+| **Activation Functions** | Compare ReLU, Sigmoid, Tanh, Leaky ReLU side by side |
+| **Loss Functions** | MSE, MAE, Huber, Log-Cosh with animated predictions |
+| **Decision Boundary** | See how classifiers divide feature space |
+| **K-Means Clustering** | Step-by-step centroid updates |
+| **Function Plotter** | Plot any mathematical expression |
+
+## Quick Start
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
+# Clone the repository
+git clone https://github.com/user/machine-no-learning.git
+cd machine-no-learning
+
+# Install dependencies
+bun install
+
+# Start development server
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Tech Stack
 
-## Learn More
+- **Framework**: [Next.js 16](https://nextjs.org/) with App Router
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **2D Visualization**: [Mafs](https://mafs.dev/)
+- **3D Rendering**: Canvas API
+- **Animation**: [Framer Motion](https://www.framer.com/motion/)
 
-To learn more about Next.js, take a look at the following resources:
+## Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+app/
+├── page.tsx                    # Landing page
+├── visualizations/page.tsx     # Gallery of all visualizations
+└── (visualizations)/           # Individual visualization pages
+    ├── gradient-descent/
+    ├── linear-regression/
+    ├── neural-network/
+    ├── activation-functions/
+    ├── loss-functions/
+    ├── decision-boundary/
+    ├── clustering/
+    └── functions/
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+components/
+├── layout/                     # Header, VizLayout
+├── ui/                         # Button, Slider, Card
+└── visualizations/             # Visualization-specific components
 
-## Deploy on Vercel
+lib/
+├── colors.ts                   # Centralized color palette
+├── math/                       # Mathematical utilities
+└── hooks/                      # React hooks
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Color System
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+All colors are centralized for easy theming:
+
+| Location | Purpose |
+|----------|---------|
+| `app/globals.css` | CSS variables for Tailwind |
+| `lib/colors.ts` | JavaScript constants for canvas/SVG |
+
+Keep both files in sync when modifying colors.
+
+## Contributing
+
+We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+```bash
+# Quick contribution workflow
+git checkout -b feature/your-feature
+bun run build  # Verify no errors
+bun run lint   # Check code style
+```
+
+## License
+
+[MIT](LICENSE) - feel free to use this for learning, teaching, or building upon.
